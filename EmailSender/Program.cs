@@ -14,12 +14,6 @@ namespace EmailSender
             var smtp = ConfigurationManager.AppSettings["SmtpServer"];
             Console.WriteLine("connectionString: "+ ConfigurationManager.AppSettings["connectionString"]);
 
-            //var connectionString = "User Id=mis_ias;Password=nabil;Data Source=10.0.5.63:1521/MIS19C";
-            //var senderEmail = "binod.mehta@nabilbank.com";
-            //var senderName = "Binod Mehta";  // Add the sender's name here
-            //var appPassword = "qztchrfwfvddblxh";
-            //var logger = new Logger();
-
             var connectionString = ConfigurationManager.AppSettings["connectionString"];
             var senderEmail = ConfigurationManager.AppSettings["SenderEmail"];
             var senderName = ConfigurationManager.AppSettings["senderName"];  // Add the sender's name here
@@ -158,43 +152,3 @@ namespace EmailSender
         }
     }
 }
-        //static async Task Main(string[] args)
-        //{
-        //    var senderEmail = "binod.mehta@nabilbank.com";
-        //    var senderName = "Binod Mehta";  // Add the sender's name here
-
-        //    var appPassword = "qztchrfwfvddblxh";
-        //    var recipientEmail = "mehtabinod2012@gmail.com, sahen.manandhar15@gmail.com ";
-        //    var subject = "Test Email";
-        //    var body = "This is a test email sent from .NET Core Console App using Microsoft 365.";
-
-        //    try
-        //    {
-        //        using (var client = new SmtpClient("smtp.office365.com", 587))
-        //        {
-        //            client.Credentials = new NetworkCredential(senderEmail, appPassword);
-        //            client.EnableSsl = true;
-
-        //            var mailMessage = new MailMessage
-        //            {
-        //                From = new MailAddress(senderEmail, senderName),
-        //                Subject = subject,
-        //                Body = body,
-        //                IsBodyHtml = true,
-        //            };
-
-        //            mailMessage.To.Add(recipientEmail);
-
-        //            await client.SendMailAsync(mailMessage);
-        //            Console.WriteLine("Email sent successfully.");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"Error sending email: {ex.Message}");
-        //    }
-        //}
-
-
-//    }
-//}
